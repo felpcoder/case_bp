@@ -1,4 +1,4 @@
-# Case Banco Paraná
+# Case series temporais
 Objetivo, utilizar base disponibilizada na pasta dados, para gerar projeção de crescimento para os próximos 2 anos. Tanto em valor da carteira, quanto em volume de operações. Além disso, como objetivos secundários estavam fazer uma análise básica de consistência e uma etapa de exploração dos dados.
 
 # Consistência
