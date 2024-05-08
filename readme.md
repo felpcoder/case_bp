@@ -37,5 +37,6 @@ Alguns insights tirados dessa seção foram:
 # Modelagem
 Com os insights foi escolhida como metodologia o uso de regressões lineares associada a variáveis como data_operacao, genero, operacao e variáveis de valor_principal lag's para que fosse possível estimar a projeção de crescimento para os próximos dois anos. Abaixo, segue gráfico com projeção estimada tanto para Valor da carteira, quanto para Volume de operações:
 
+![image](https://github.com/felpcoder/case_bp/assets/74699523/028513ed-305b-4133-a60b-e4d94955a94c)
 
 É possível observar que a projeção de crescimento em até 2 anos é a carteira aumentar o valor total em 3 milhões no valor_principal. Enquanto que no volume de operações deve subir de 300 mensais para pouco mais de 500. É possível observar que as série de valor e a série de volume de operações são altamente correlacionadas. As regressões se mostraram um bom instrumento para entender e modelar séries temporais, pelo menos para séries que possuem autocorrelação. A metodologia utilizando regressão deixou a desejar pra modelar a série estacionária e sem correlação, uma vez que o R2 e demais métricas ficaram bem abaixo.
