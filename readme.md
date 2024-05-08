@@ -25,6 +25,7 @@ Análise feita no notebook exploracao.ipynb. Foram feitas diversas análises uni
 Seguem as definições:
 * Valor da carteira - O valor da carteira em um mês foi definido como a soma da variável valor_principal para todos os contratos existentes na data.
 * Volume de Operações - O volume de operações em um mês foi definida como a quantidade de registros da variável contratos existentes na data.
+  
 Alguns insights tirados dessa seção foram:
 * Idade e estado tem distribuição muito parecida para todos os valores.
 * Gênero tem distribuições diferentes, e as mulheres são a maioria em valor da carteira e em volume de operações.
@@ -32,9 +33,9 @@ Alguns insights tirados dessa seção foram:
 * As séries de Valor da carteira possuí autocorrelação forte com lags quando agrupadas por operação Prod e Refin.
 * As series de Valor da carteira possuem alta correlação linear quando agrupadas por operação Prod e Refin.
 * A seríe de Valor da carteira Port + Refin é estacionária e não possui autocorrelação.
+  
 # Modelagem
 Com os insights foi escolhida como metodologia o uso de regressões lineares associada a variáveis como data_operacao, genero, operacao e variáveis de valor_principal lag's para que fosse possível estimar a projeção de crescimento para os próximos dois anos. Abaixo, segue gráfico com projeção estimada tanto para Valor da carteira, quanto para Volume de operações:
 
-![image](https://github.com/felpcoder/case_bp/assets/74699523/92d698e8-2263-41d2-ab7a-9de10442ca94)
 
 É possível observar que a projeção de crescimento em até 2 anos é a carteira aumentar o valor total em 3 milhões no valor_principal. Enquanto que no volume de operações deve subir de 300 mensais para pouco mais de 500. É possível observar que as série de valor e a série de volume de operações são altamente correlacionadas. As regressões se mostraram um bom instrumento para entender e modelar séries temporais, pelo menos para séries que possuem autocorrelação. A metodologia utilizando regressão deixou a desejar pra modelar a série estacionária e sem correlação, uma vez que o R2 e demais métricas ficaram bem abaixo.
